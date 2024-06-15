@@ -1,0 +1,1 @@
+ PIC_DS1302.d  PIC_DS1302.p1:  C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/PIC_DS1302.c C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/PIC_DS1302.h

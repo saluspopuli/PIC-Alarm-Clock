@@ -1,0 +1,1 @@
+ SEG7_4DIG.d  SEG7_4DIG.p1:  C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/SEG7_4DIG.c C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/SEG7_4DIG.h

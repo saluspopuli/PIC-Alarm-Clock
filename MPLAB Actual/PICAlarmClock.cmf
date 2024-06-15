@@ -1,0 +1,771 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$startup.obj
+end_init CODE 0 12 12 3 2
+reset_vec CODE 0 0 0 3 2
+config CONFIG 0 2007 2007 1 2
+$PICAlarmClock.obj
+cinit CODE 0 15 15 13 2
+intentry CODE 0 4 4 E 2
+text25 CODE 0 3E6 3E6 27 2
+text24 CODE 0 330 330 33 2
+text23 CODE 0 46F 46F 18 2
+text22 CODE 0 487 487 15 2
+text21 CODE 0 4D1 4D1 F 2
+text20 CODE 0 193 193 5D 2
+text19 CODE 0 1F0 1F0 4F 2
+text18 CODE 0 27F 27F 3F 2
+text17 CODE 0 49C 49C 13 2
+text16 CODE 0 512 512 8 2
+text15 CODE 0 4C0 4C0 11 2
+text14 CODE 0 40D 40D 25 2
+text13 CODE 0 2BE 2BE 3C 2
+text12 CODE 0 455 455 1A 2
+text11 CODE 0 508 508 A 2
+text10 CODE 0 392 392 2B 2
+text9 CODE 0 4FE 4FE A 2
+text8 CODE 0 4F4 4F4 A 2
+text7 CODE 0 4EA 4EA A 2
+text6 CODE 0 363 363 2F 2
+text5 CODE 0 23F 23F 40 2
+text4 CODE 0 2FA 2FA 36 2
+text3 CODE 0 28 28 DC 2
+text2 CODE 0 3BD 3BD 29 2
+text1 CODE 0 104 104 8F 2
+maintext CODE 0 432 432 23 2
+cstackBANK0 BANK0 1 20 20 20 1
+cstackCOMMON COMMON 1 70 70 9 1
+inittext CODE 0 4AF 4AF 11 2
+dataBANK0 BANK0 1 40 40 A 1
+bssBANK0 BANK0 1 4A 4A 2 1
+bssCOMMON COMMON 1 79 79 1 1
+idataBANK0 CODE 0 4E0 4E0 A 2
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+BANK0 004C-006F 1
+BANK1 00A0-00EF 1
+BANK2 0110-016F 1
+BANK3 0190-01EF 1
+CODE 0003-0003 2
+CODE 051A-1FFF 2
+COMMON 007A-007D 1
+CONST 0003-0003 2
+CONST 051A-1FFF 2
+EEDATA 2100-21FF 2
+ENTRY 0003-0003 2
+ENTRY 051A-1FFF 2
+IDLOC 2000-2003 2
+RAM 004C-006F 1
+RAM 00A0-00EF 1
+RAM 0110-016F 1
+RAM 0190-01EF 1
+SFR0 0000-001F 1
+SFR1 0080-009F 1
+SFR2 0100-010F 1
+SFR3 0180-018F 1
+STACK 0110-016F 1
+STRCODE 0003-0003 2
+STRCODE 051A-1FFF 2
+STRING 0003-0003 2
+STRING 051A-1FFF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <file name>:<line number> <address> <psect name> <class name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$PICAlarmClock.obj
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":27 4 intentry CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":665 15 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":668 15 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":693 15 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":696 16 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":697 17 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":729 18 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":730 19 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":731 1A cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":732 1B cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":733 1C cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":734 1D cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":735 1E cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":736 1F cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":737 20 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":738 21 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":744 24 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":745 24 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":746 25 cinit CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":11 28 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":12 28 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":13 3F text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":14 65 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":15 8B text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":17 A0 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":18 AD text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":19 BA text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":20 C2 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":22 C7 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":23 D5 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":24 E5 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":25 F5 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":26 103 text3 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":63 104 text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":64 104 text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":65 10A text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":66 114 text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":68 11E text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":69 13F text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":70 147 text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":71 151 text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":73 15B text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":75 17C text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":76 17D text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":78 187 text1 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":79 192 text1 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":6 193 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":14 193 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":15 196 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":16 198 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":17 19D text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":19 19F text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":20 1A1 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":21 1A6 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":23 1AA text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":24 1AC text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":25 1B0 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 1B2 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":27 1B4 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":28 1BB text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":26 1BF text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":31 1C0 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":32 1C7 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":33 1CF text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":34 1D5 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":36 1D6 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":37 1DD text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":39 1E1 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":40 1E4 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awdiv.c":41 1E9 text20 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":6 1F0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":13 1F0 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":14 1F3 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":15 1F5 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":16 1FA text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":18 1FC text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":19 1FE text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":20 203 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":21 207 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 209 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":23 20B text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":24 212 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":22 216 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":27 217 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":28 21F text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":29 225 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":30 22C text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":32 230 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":33 233 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\awmod.c":34 238 text19 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":6 23F text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":14 23F text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":15 243 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":16 247 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 249 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":18 24B text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":19 252 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":17 256 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":22 257 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":23 25E text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":24 266 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":25 26C text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":27 26D text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":28 274 text5 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwdiv.c":30 278 text5 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":173 27F text18 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":174 282 text18 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":175 298 text18 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":176 2AE text18 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":178 2BC text18 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":54 2BE text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":55 2BE text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":57 2BF text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":59 2C2 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":60 2CF text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":61 2D2 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":62 2D3 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":63 2D6 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":65 2D7 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":67 2DE text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":68 2E2 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":59 2E7 text13 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":72 2F8 text13 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":6 2FA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":13 2FA text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":14 2FE text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 302 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":16 304 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":17 30B text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":15 30F text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":20 310 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":21 318 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":22 31E text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":23 325 text4 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\lwmod.c":25 329 text4 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":41 330 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":42 331 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":44 334 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":45 341 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":46 344 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":47 345 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":48 357 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":49 358 text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":50 35B text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":44 35C text24 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":28 363 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":29 364 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":30 367 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":31 368 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":32 369 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":34 36A text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":35 36B text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":36 36B text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":37 36C text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":38 36D text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":39 36D text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":40 36E text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":41 36F text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":42 36F text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":43 370 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":44 371 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":45 371 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":47 372 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":34 373 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":49 381 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":50 387 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":51 389 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":54 38A text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":55 391 text6 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":85 392 text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":86 392 text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":87 39D text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":89 39E text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":91 3A0 text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":93 3AC text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":94 3AE text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":97 3B1 text10 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":100 3BB text10 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":15 3BD text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":43 3BD text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":45 3C1 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":46 3C3 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":47 3CB text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":48 3D2 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":49 3D9 text2 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul16.c":52 3DD text2 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":27 3E6 text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":28 3E6 text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":30 3E7 text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":31 3E9 text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":33 3EA text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":35 3F0 text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":36 3FB text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":41 3FF text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":42 400 text25 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":165 40D text14 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":166 410 text14 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":167 41D text14 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":168 422 text14 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":170 430 text14 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":44 432 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":46 432 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":47 437 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":49 43C maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":50 43F maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":51 440 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":53 441 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":57 447 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\main.c":55 454 maintext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":19 455 text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":20 458 text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":21 459 text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":23 45B text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":24 464 text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":26 46C text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":28 46D text12 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":31 46F text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":32 472 text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":33 473 text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":35 475 text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":36 47D text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":38 483 text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":39 486 text23 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":15 487 text22 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":16 48A text22 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":17 49B text22 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":160 49C text17 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":161 49F text17 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":162 4AE text17 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":703 4AF inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":704 4AF inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":705 4B0 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":706 4B1 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":707 4B2 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":714 4B3 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":715 4B3 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":716 4B6 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":717 4B7 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":718 4B8 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":719 4B9 inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":720 4BA inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":721 4BB inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":722 4BC inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":723 4BD inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":724 4BE inittext CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\PICAlarmClock.as":725 4BF inittext CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":4 4C0 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":6 4C1 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":43 4C2 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":44 4C4 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":45 4C8 text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":46 4CA text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":47 4CC text15 CODE
+"C:\Program Files (x86)\Microchip\xc8\v1.33\sources\common\Umul8.c":50 4CF text15 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":3 4D1 text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":4 4D1 text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":5 4D4 text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":6 4D5 text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":8 4D6 text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":9 4D9 text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":10 4DA text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":12 4DB text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":13 4DF text21 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":115 4EA text7 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":116 4EA text7 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":107 4F4 text8 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":108 4F4 text8 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":81 4FE text9 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":82 4FE text9 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":103 508 text11 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\PIC_DS1302.c":104 508 text11 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":3 512 text16 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":4 512 text16 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":5 515 text16 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":6 516 text16 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":7 517 text16 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":8 518 text16 CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Source\SEG7_4DIG.c":9 519 text16 CODE
+$startup.obj
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":40 0 functab CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":41 0 functab CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":42 0 functab CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":43 0 functab CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":44 0 functab CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":45 0 functab CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":64 0 reset_vec CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":69 0 reset_vec CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":74 12 init CODE
+"C:\Users\Andre\Documents\Coding Main\PIC-Alarm-Clock\MPLAB Actual\startup.as":77 12 end_init CODE
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___lwdiv@dividend 23 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+RTC_read@i 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+___awdiv@counter 20 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___lwdiv@counter 28 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+_BCD_to_decimal 81A 0 CODE 0 text14 PICAlarmClock.obj
+__CFG_WRT$OFF 0 0 ABS 0 - PICAlarmClock.obj
+_RC0 38 0 ABS 0 - PICAlarmClock.obj
+_RC1 39 0 ABS 0 - PICAlarmClock.obj
+_RC2 3A 0 ABS 0 - PICAlarmClock.obj
+_RB4 34 0 ABS 0 - PICAlarmClock.obj
+displayOnSegment@day 3E 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+_RB5 35 0 ABS 0 - PICAlarmClock.obj
+_RB6 36 0 ABS 0 - PICAlarmClock.obj
+_RB7 37 0 ABS 0 - PICAlarmClock.obj
+__S0 2008 0 ABS 0 - -
+__S1 7A 0 ABS 0 - -
+__S2 0 0 ABS 0 - -
+__S3 0 0 ABS 0 - -
+_RX9 C6 0 ABS 0 - PICAlarmClock.obj
+_TX9 4C6 0 ABS 0 - PICAlarmClock.obj
+_GIE 5F 0 ABS 0 - PICAlarmClock.obj
+_ISR 7CC 0 CODE 0 text25 PICAlarmClock.obj
+__Hintentry 24 0 CODE 0 intentry -
+__Lintentry 8 0 CODE 0 intentry -
+__CFG_BOREN$ON 0 0 ABS 0 - PICAlarmClock.obj
+__pintentry 8 0 CODE 0 intentry PICAlarmClock.obj
+__end_of___awdiv 3E0 0 CODE 0 text20 PICAlarmClock.obj
+__CFG_PWRTE$ON 0 0 ABS 0 - PICAlarmClock.obj
+_RCIF 65 0 ABS 0 - PICAlarmClock.obj
+_BRGH 4C2 0 ABS 0 - PICAlarmClock.obj
+_SYNC 4C4 0 ABS 0 - PICAlarmClock.obj
+_INTE 5C 0 ABS 0 - PICAlarmClock.obj
+_INTF 59 0 ABS 0 - PICAlarmClock.obj
+_CREN C4 0 ABS 0 - PICAlarmClock.obj
+_SPEN C7 0 ABS 0 - PICAlarmClock.obj
+_TXEN 4C5 0 ABS 0 - PICAlarmClock.obj
+_TRMT 4C1 0 ABS 0 - PICAlarmClock.obj
+displayOnSegment@year 3F 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__size_of_RTC_read_register 0 0 ABS 0 - PICAlarmClock.obj
+RTC_set_year@year 2E 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+_RTC_read 57C 0 CODE 0 text13 PICAlarmClock.obj
+_main 864 0 CODE 0 maintext PICAlarmClock.obj
+___sp 0 0 STACK 2 stack startup.obj
+btemp 7E 0 ABS 0 - PICAlarmClock.obj
+ltemp 7E 0 ABS 0 - PICAlarmClock.obj
+ttemp 7E 0 ABS 0 - PICAlarmClock.obj
+wtemp 7E 0 ABS 0 - PICAlarmClock.obj
+start 24 0 CODE 0 init startup.obj
+__end_of_RTC_write_protect 938 0 CODE 0 text22 PICAlarmClock.obj
+__end_of_BCD_to_decimal 864 0 CODE 0 text14 PICAlarmClock.obj
+RTC_write@i 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+decimal_to_BCD@ones 28 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+_RCREG 1A 0 ABS 0 - PICAlarmClock.obj
+_TXREG 19 0 ABS 0 - PICAlarmClock.obj
+reset_vec 0 0 CODE 0 reset_vec startup.obj
+_TRISD 88 0 ABS 0 - PICAlarmClock.obj
+_SPBRG 99 0 ABS 0 - PICAlarmClock.obj
+_PORTD 8 0 ABS 0 - PICAlarmClock.obj
+RTC_write_protect@state 2F 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+ltemp0 7E 0 ABS 0 - PICAlarmClock.obj
+ttemp0 7E 0 ABS 0 - PICAlarmClock.obj
+wtemp0 7E 0 ABS 0 - PICAlarmClock.obj
+ltemp1 82 0 ABS 0 - PICAlarmClock.obj
+ttemp1 81 0 ABS 0 - PICAlarmClock.obj
+wtemp1 80 0 ABS 0 - PICAlarmClock.obj
+ltemp2 86 0 ABS 0 - PICAlarmClock.obj
+ttemp2 84 0 ABS 0 - PICAlarmClock.obj
+wtemp2 82 0 ABS 0 - PICAlarmClock.obj
+ltemp3 80 0 ABS 0 - PICAlarmClock.obj
+ttemp3 87 0 ABS 0 - PICAlarmClock.obj
+wtemp3 84 0 ABS 0 - PICAlarmClock.obj
+ttemp4 7F 0 ABS 0 - PICAlarmClock.obj
+wtemp4 86 0 ABS 0 - PICAlarmClock.obj
+_RTC_WRITE_PROTECT 79 0 COMMON 1 bssCOMMON PICAlarmClock.obj
+__end_of_SEG7_write_digit 724 0 CODE 0 text6 PICAlarmClock.obj
+wtemp5 88 0 ABS 0 - PICAlarmClock.obj
+wtemp6 7F 0 ABS 0 - PICAlarmClock.obj
+interrupt_function 8 0 CODE 0 intentry PICAlarmClock.obj
+__Hconfig 4010 0 CONFIG 0 config -
+__Lconfig 400E 0 CONFIG 0 config -
+_RTC_get_minutes 9FC 0 CODE 0 text9 PICAlarmClock.obj
+displayOnSegment@phase 36 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+?___awmod 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+?___lwmod 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+displayOnSegment@month 3D 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+decimal_to_BCD@bcd 29 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__end_of_RTC_get_date A24 0 CODE 0 text11 PICAlarmClock.obj
+displayOnSegment@hours 3C 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__end_of_RTC_get_year 9E8 0 CODE 0 text7 PICAlarmClock.obj
+_phase 4A 0 BANK0 1 bssBANK0 PICAlarmClock.obj
+__end_of_ISR 81A 0 CODE 0 text25 PICAlarmClock.obj
+_TRISB0 430 0 ABS 0 - PICAlarmClock.obj
+__Hfunctab 0 0 CODE 0 functab -
+_TRISC0 438 0 ABS 0 - PICAlarmClock.obj
+__Lfunctab 0 0 CODE 0 functab -
+_TRISC1 439 0 ABS 0 - PICAlarmClock.obj
+_TRISC2 43A 0 ABS 0 - PICAlarmClock.obj
+_TRISB4 434 0 ABS 0 - PICAlarmClock.obj
+_TRISB5 435 0 ABS 0 - PICAlarmClock.obj
+_TRISB6 436 0 ABS 0 - PICAlarmClock.obj
+_RTC_read_register 8AA 0 CODE 0 text12 PICAlarmClock.obj
+_TRISB7 437 0 ABS 0 - PICAlarmClock.obj
+SEG7_write_all@dp1 32 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+SEG7_write_all@dp2 33 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+SEG7_write_all@dp3 34 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+SEG7_write_all@dp4 35 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__Hcommon 0 0 ABS 0 common -
+__Lcommon 0 0 ABS 0 common -
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+_RTC_init 9A2 0 CODE 0 text21 PICAlarmClock.obj
+___int_sp 0 0 STACK 2 stack startup.obj
+?___awdiv 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+?___lwdiv 21 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+RTC_read_register@data 22 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__end_of_RTC_set_year 95E 0 CODE 0 text17 PICAlarmClock.obj
+_RTC_get_hours 724 0 CODE 0 text10 PICAlarmClock.obj
+__Habs1 0 0 ABS 0 abs1 -
+__Labs1 0 0 ABS 0 abs1 -
+__end_of_decimal_to_BCD 57C 0 CODE 0 text18 PICAlarmClock.obj
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__end_of_SEG7_write_all 208 0 CODE 0 text3 PICAlarmClock.obj
+__Lsfr2 0 0 ABS 0 sfr2 -
+__end_of_RTC_get_month 9FC 0 CODE 0 text8 PICAlarmClock.obj
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+SEG7_write_all@digit1 2E 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__end_of_RTC_get_hours 77A 0 CODE 0 text10 PICAlarmClock.obj
+SEG7_write_all@digit2 2F 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+SEG7_write_all@digit3 30 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+SEG7_write_all@digit4 31 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__size_of_displayOnSegment 0 0 ABS 0 - PICAlarmClock.obj
+_RTC_get_month 9E8 0 CODE 0 text8 PICAlarmClock.obj
+__end_of_RTC_read_register 8DE 0 CODE 0 text12 PICAlarmClock.obj
+__end_of___awmod 47E 0 CODE 0 text19 PICAlarmClock.obj
+init_fetch0 95E 0 CODE 0 inittext PICAlarmClock.obj
+__Hcode 0 0 ABS 0 code -
+__Lcode 0 0 ABS 0 code -
+RTC_read_register@address 21 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+stackhi 0 0 ABS 0 - startup.obj
+_RTC_write 660 0 CODE 0 text24 PICAlarmClock.obj
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+_segNum 40 0 BANK0 1 dataBANK0 PICAlarmClock.obj
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___awmod@sign 21 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+stacklo 0 0 ABS 0 - startup.obj
+saved_w 7E 0 ABS 0 - PICAlarmClock.obj
+___bmul 980 0 CODE 0 text15 PICAlarmClock.obj
+__Hinit 24 0 CODE 0 init -
+__Linit 24 0 CODE 0 init -
+___wmul 77A 0 CODE 0 text2 PICAlarmClock.obj
+__end_of_main 8AA 0 CODE 0 maintext PICAlarmClock.obj
+__Htext 0 0 ABS 0 text -
+__Ltext 0 0 ABS 0 text -
+___bmul@multiplier 77 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+___wmul@multiplier 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__HdataBANK0 0 0 ABS 0 dataBANK0 -
+__LdataBANK0 0 0 ABS 0 dataBANK0 -
+__pdataBANK0 40 0 BANK0 1 dataBANK0 PICAlarmClock.obj
+end_of_initialization 48 0 CODE 0 cinit PICAlarmClock.obj
+__size_of_RTC_read 0 0 ABS 0 - PICAlarmClock.obj
+___awdiv@sign 21 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__size_of_ISR 0 0 ABS 0 - PICAlarmClock.obj
+___bmul@multiplicand 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+___wmul@multiplicand 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+_SEG7_init A24 0 CODE 0 text16 PICAlarmClock.obj
+__end_of_displayOnSegment 326 0 CODE 0 text1 PICAlarmClock.obj
+_displayOnSegment 208 0 CODE 0 text1 PICAlarmClock.obj
+__CFG_FOSC$XT 0 0 ABS 0 - PICAlarmClock.obj
+__size_of_SEG7_write_digit 0 0 ABS 0 - PICAlarmClock.obj
+RTC_read@data 78 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__end_of_SEG7_init A34 0 CODE 0 text16 PICAlarmClock.obj
+__Hstrings 0 0 ABS 0 strings -
+__Lstrings 0 0 ABS 0 strings -
+_decimal_to_BCD 4FE 0 CODE 0 text18 PICAlarmClock.obj
+__size_of_SEG7_init 0 0 ABS 0 - PICAlarmClock.obj
+BCD_to_decimal@ones 23 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__Hbank0 0 0 ABS 0 bank0 -
+__Lbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 ABS 0 bank3 -
+__Lbank3 0 0 ABS 0 bank3 -
+___latbits 2 0 ABS 0 - PICAlarmClock.obj
+__size_of_RTC_init 0 0 ABS 0 - PICAlarmClock.obj
+__Hpowerup 0 0 CODE 0 powerup -
+__Lpowerup 0 0 CODE 0 powerup -
+SEG7_write_digit@value 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+_RTC_write_protect 90E 0 CODE 0 text22 PICAlarmClock.obj
+SEG7_write_digit@digit 77 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__ptext1 208 0 CODE 0 text1 PICAlarmClock.obj
+__ptext2 77A 0 CODE 0 text2 PICAlarmClock.obj
+__ptext3 50 0 CODE 0 text3 PICAlarmClock.obj
+__ptext4 5F4 0 CODE 0 text4 PICAlarmClock.obj
+__ptext5 47E 0 CODE 0 text5 PICAlarmClock.obj
+BCD_to_decimal@bcd 25 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__ptext6 6C6 0 CODE 0 text6 PICAlarmClock.obj
+__ptext7 9D4 0 CODE 0 text7 PICAlarmClock.obj
+__size_of_BCD_to_decimal 0 0 ABS 0 - PICAlarmClock.obj
+__ptext8 9E8 0 CODE 0 text8 PICAlarmClock.obj
+__ptext9 9FC 0 CODE 0 text9 PICAlarmClock.obj
+__Hclrtext 0 0 ABS 0 clrtext -
+__Lclrtext 0 0 ABS 0 clrtext -
+__end_of_RTC_write_register 90E 0 CODE 0 text23 PICAlarmClock.obj
+__size_of_RTC_write_register 0 0 ABS 0 - PICAlarmClock.obj
+__end_of__initialization 48 0 CODE 0 cinit PICAlarmClock.obj
+RTC_get_hours@tmp 27 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__end_of___lwdiv 4FE 0 CODE 0 text5 PICAlarmClock.obj
+RTC_write_register@data 2B 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+decimal_to_BCD@tens 27 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+_RTC_get_year 9D4 0 CODE 0 text7 PICAlarmClock.obj
+_RTC_set_year 938 0 CODE 0 text17 PICAlarmClock.obj
+__Hidloc 0 0 IDLOC 0 idloc -
+__Lidloc 0 0 IDLOC 0 idloc -
+__Hstack 0 0 STACK 2 stack -
+__Lstack 0 0 STACK 2 stack -
+___awmod 3E0 0 CODE 0 text19 PICAlarmClock.obj
+___lwmod 5F4 0 CODE 0 text4 PICAlarmClock.obj
+__Hspace_0 2008 0 ABS 0 - -
+__Lspace_0 0 0 ABS 0 - -
+__size_of_SEG7_write_all 0 0 ABS 0 - PICAlarmClock.obj
+__Hspace_1 7A 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+displayOnSegment@minutes 3B 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+SEG7_write_all@value 29 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__Hspace_2 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+?___wmul 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__Hcinit 50 0 CODE 0 cinit -
+__Lcinit 2A 0 CODE 0 cinit -
+___awdiv 326 0 CODE 0 text20 PICAlarmClock.obj
+__Hspace_3 0 0 ABS 0 - -
+___lwdiv 47E 0 CODE 0 text5 PICAlarmClock.obj
+__Lspace_3 0 0 ABS 0 - -
+__size_of_main 0 0 ABS 0 - PICAlarmClock.obj
+__HidataBANK0 0 0 ABS 0 idataBANK0 -
+__LidataBANK0 0 0 ABS 0 idataBANK0 -
+__pidataBANK0 9C0 0 CODE 0 idataBANK0 PICAlarmClock.obj
+decimal_to_BCD@decimal 2A 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+RTC_write_register@address 2C 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__size_of___lwdiv 0 0 ABS 0 - PICAlarmClock.obj
+__end_of_RTC_get_minutes A10 0 CODE 0 text9 PICAlarmClock.obj
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__pbssBANK0 4A 0 BANK0 1 bssBANK0 PICAlarmClock.obj
+__size_of_RTC_get_date 0 0 ABS 0 - PICAlarmClock.obj
+__size_of_RTC_get_year 0 0 ABS 0 - PICAlarmClock.obj
+__size_of_RTC_write_protect 0 0 ABS 0 - PICAlarmClock.obj
+__ptext10 724 0 CODE 0 text10 PICAlarmClock.obj
+__ptext20 326 0 CODE 0 text20 PICAlarmClock.obj
+__ptext11 A10 0 CODE 0 text11 PICAlarmClock.obj
+__ptext21 9A2 0 CODE 0 text21 PICAlarmClock.obj
+__ptext12 8AA 0 CODE 0 text12 PICAlarmClock.obj
+_SEG7_write_all 50 0 CODE 0 text3 PICAlarmClock.obj
+__ptext22 90E 0 CODE 0 text22 PICAlarmClock.obj
+__ptext13 57C 0 CODE 0 text13 PICAlarmClock.obj
+__ptext23 8DE 0 CODE 0 text23 PICAlarmClock.obj
+__size_of___awdiv 0 0 ABS 0 - PICAlarmClock.obj
+__ptext14 81A 0 CODE 0 text14 PICAlarmClock.obj
+__ptext24 660 0 CODE 0 text24 PICAlarmClock.obj
+__ptext15 980 0 CODE 0 text15 PICAlarmClock.obj
+__ptext25 7CC 0 CODE 0 text25 PICAlarmClock.obj
+__size_of_RTC_get_minutes 0 0 ABS 0 - PICAlarmClock.obj
+__ptext16 A24 0 CODE 0 text16 PICAlarmClock.obj
+__end_of_RTC_write 6C6 0 CODE 0 text24 PICAlarmClock.obj
+__ptext17 938 0 CODE 0 text17 PICAlarmClock.obj
+___awmod@divisor 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__end_of___lwmod 660 0 CODE 0 text4 PICAlarmClock.obj
+___lwmod@divisor 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__ptext18 4FE 0 CODE 0 text18 PICAlarmClock.obj
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__ptext19 3E0 0 CODE 0 text19 PICAlarmClock.obj
+__pbssCOMMON 79 0 COMMON 1 bssCOMMON PICAlarmClock.obj
+__Hend_init 2A 0 CODE 0 end_init -
+__Lend_init 24 0 CODE 0 end_init -
+RTC_get_hours@hours 28 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___awdiv@divisor 74 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+___lwdiv@divisor 21 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__size_of___wmul 0 0 ABS 0 - PICAlarmClock.obj
+__Hreset_vec 6 0 CODE 0 reset_vec -
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__size_of_RTC_set_year 0 0 ABS 0 - PICAlarmClock.obj
+RTC_write@data 75 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+SEG7_write_all@decimal_point 2B 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__size_of_decimal_to_BCD 0 0 ABS 0 - PICAlarmClock.obj
+__size_of_RTC_get_month 0 0 ABS 0 - PICAlarmClock.obj
+init_ram0 966 0 CODE 0 inittext PICAlarmClock.obj
+intlevel0 0 0 CODE 0 functab startup.obj
+__CFG_WDTE$OFF 0 0 ABS 0 - PICAlarmClock.obj
+__size_of_RTC_get_hours 0 0 ABS 0 - PICAlarmClock.obj
+intlevel1 0 0 CODE 0 functab startup.obj
+intlevel2 0 0 CODE 0 functab startup.obj
+BCD_to_decimal@tens 22 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+intlevel3 0 0 CODE 0 functab startup.obj
+intlevel4 0 0 CODE 0 functab startup.obj
+intlevel5 0 0 CODE 0 functab startup.obj
+SEG7_write_digit@decimal_point 75 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+_RTC_write_register 8DE 0 CODE 0 text23 PICAlarmClock.obj
+__size_of___lwmod 0 0 ABS 0 - PICAlarmClock.obj
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+__end_of_RTC_read 5F4 0 CODE 0 text13 PICAlarmClock.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+__end_of___wmul 7CC 0 CODE 0 text2 PICAlarmClock.obj
+__CFG_CPD$OFF 0 0 ABS 0 - PICAlarmClock.obj
+start_initialization 2A 0 CODE 0 cinit PICAlarmClock.obj
+___awdiv@quotient 22 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___lwdiv@quotient 26 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+_RTC_get_date A10 0 CODE 0 text11 PICAlarmClock.obj
+__Hmaintext 0 0 ABS 0 maintext -
+__Lmaintext 0 0 ABS 0 maintext -
+__pmaintext 864 0 CODE 0 maintext PICAlarmClock.obj
+__Hinittext 0 0 ABS 0 inittext -
+__Linittext 0 0 ABS 0 inittext -
+__size_of___awmod 0 0 ABS 0 - PICAlarmClock.obj
+__end_of_RTC_init 9C0 0 CODE 0 text21 PICAlarmClock.obj
+__initialization 2A 0 CODE 0 cinit PICAlarmClock.obj
+BCD_to_decimal@decimal 24 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___awmod@dividend 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+___lwmod@dividend 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+___bmul@product 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+_SEG7_write_digit 6C6 0 CODE 0 text6 PICAlarmClock.obj
+___awmod@counter 20 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___wmul@product 20 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+___lwmod@counter 20 0 BANK0 1 cstackBANK0 PICAlarmClock.obj
+__CFG_CP$OFF 0 0 ABS 0 - PICAlarmClock.obj
+__CFG_LVP$OFF 0 0 ABS 0 - PICAlarmClock.obj
+__size_of___bmul 0 0 ABS 0 - PICAlarmClock.obj
+__end_of___bmul 9A2 0 CODE 0 text15 PICAlarmClock.obj
+__size_of_RTC_write 0 0 ABS 0 - PICAlarmClock.obj
+___awdiv@dividend 76 0 COMMON 1 cstackCOMMON PICAlarmClock.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect in on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 3 2
+intentry 0 4 8 516 2
+config 0 2007 400E 1 2
+cstackCOMMON 1 70 70 A 1
+cstackBANK0 1 20 20 2C 1

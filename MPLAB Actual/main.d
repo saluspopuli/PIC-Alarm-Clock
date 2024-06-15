@@ -1,0 +1,1 @@
+ main.d  main.p1:  C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/main.c C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/PIC_DS1302.h C:/Users/Andre/Documents/Coding\ Main/PIC-Alarm-Clock/MPLAB\ Source/SEG7_4DIG.h
