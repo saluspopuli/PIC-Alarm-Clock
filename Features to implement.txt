@@ -1,0 +1,14 @@
+* 4 digit 7 segment display for current time (24-hr format)
+	- Create library for PIC to handle the 7seg 4 digit LED display
+
+* Real-time display in 24-hr format that persists through shutdowns using RTC module
+
+* Store alarm times in EEPROM so it persists through shutdowns
+
+* Can send commands to the PIC via Bluetooth UART 
+	- Commands include:
+		- Adding alarm times (max 10 maybe?)
+		- Displaying all current alarm times on the 7seg (2 sec between each)
+
+* Button to shut off alarm
+	- If no alarm maybe I could make it cycle between time, day & month, and year
