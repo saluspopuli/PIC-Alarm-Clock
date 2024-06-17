@@ -12,3 +12,61 @@
 
 * Button to shut off alarm
 	- If no alarm maybe I could make it cycle between time, day & month, and year
+
+
+
+======================== IDEAS TO STORE DATA ========================================
+
+For now, what I want to implement is a single alarm system and repeating based on days
+
+So the data I need to store is:
+	Days in binary(THIS MEANS SUN-SAT (1-7) NOT DATE) - Hour - Minutes
+
+So the days will be in binary format to determine what days it will sound. The least significant bit
+is Saturday and bit 6 will be Sunday, bit 8 will be the Boolean to determine if it is repeating. 
+IF MORE THAN 1 DAY IS SET, IT IS ALREADY IMPLICITLY REPEATING
+
+This means I will need 3 bytes to store the days, hour and minutes
+
+Example format:
+
+Mon-Fri alarm @ 12:50
+	Byte 1:          Byte 2:           Byte 3:
+	0b00111110       0b00001010(12)    0b00110010(50)
+
+
+
+======================== COMMAND FORMAT ============================================
+
+I will create an application that will do this on its own but for now, a simple UART interface
+will suffice.
+
+The command will be a suffix as it serves as a delimiter between it and the next command
+
+G = Add alarm
+	Desc:
+		Adds alarm
+
+	Format:
+	
+		Ex: Mon-Fri alarm @ 12:50
+
+		3E 0C 32 G
+		This is the same as above but converted into HEX to minimize space
+
+H = Return list of alarms
+	Desc:
+		This will send a list of all alarms via UART with indices as well as
+		iterate through it on the physical LED display
+
+	Format:
+		H
+
+I = Remove alarm
+	Desc:
+	 	Removes alarm based on given index
+	Format:
+		Remove index 5 alarm
+		
+		5 I
+		
