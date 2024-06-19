@@ -8,27 +8,25 @@
 
 uint8_t inputBuffer[] = "3E 0C 32 ";
 
-void addAlarm(){
-   char *token;
-   uint8_t hex_values[3];
-   
-   int i = 0;
-   
-   token = strtok(inputBuffer, " ");
-   
-   while (token != NULL){
-      hex_values[i++] = (uint8_t)strtol(token, NULL, 16);
-      token = strtok (NULL, " ");
-   }
-   
-
-	 printf("%02X(%d) ", hex_values[0], hex_values[0]);
-     printf("%02X(%d) ", hex_values[1], hex_values[1]);
-     printf("%02X(%d) ", hex_values[2], hex_values[2]);
-
-
-
- }
+void removeAlarm(){
+    char *token;
+    
+    token = strtok(inputBuffer, " ");
+    
+    if (token != NULL) {
+        int number = atoi(token);
+        
+        // Rest of your code...
+        
+        if (index < EEPROM_MAX){
+            int tmp = index * EEPROM_ENTRY_SIZE;
+            
+            EEPROM_write(tmp, 255);
+            EEPROM_write(tmp+1, 255);
+            EEPROM_write(tmp+2, 255);
+        }
+    }
+}
 
 int main(){
     addAlarm();
